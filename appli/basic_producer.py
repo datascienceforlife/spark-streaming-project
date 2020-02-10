@@ -1,7 +1,16 @@
 import socket
 import sys
+import subprocess
 
-TCP_HOST = "172.22.224.79" # To be substitued with the IP address on the network
+
+def get_host():
+    command = "ifconfig en0 | grep 'inet ' | awk '{print $2}' | cut -f1 -d'/'"
+    result = subprocess.check_output(command, shell=True)
+    HOST = result.decode('utf-8')[:-2]  # Remove \n
+    return HOST
+
+
+TCP_HOST = get_host()
 TCP_PORT = 9999
 FILE_PATH = "./data.txt"
 
@@ -22,9 +31,9 @@ sock.listen(1)
 print('Listening on {}:{}...'.format(TCP_HOST, TCP_PORT))
 print('Waiting for connection')
 connection, client_address = sock.accept()
-try:		
-	connection.sendall(data.encode())
-    
+try:
+    connection.sendall(data.encode())
+
 finally:
-  # Clean up the connection
-  connection.close()	  
+    # Clean up the connection
+    connection.close()
