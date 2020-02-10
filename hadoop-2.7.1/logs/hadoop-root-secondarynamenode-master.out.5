@@ -1,0 +1,10 @@
+Exception in thread "main" java.lang.IllegalArgumentException: java.net.UnknownHostException: master
+	at org.apache.hadoop.security.SecurityUtil.buildTokenService(SecurityUtil.java:377)
+	at org.apache.hadoop.hdfs.NameNodeProxies.createNonHAProxy(NameNodeProxies.java:310)
+	at org.apache.hadoop.hdfs.NameNodeProxies.createNonHAProxy(NameNodeProxies.java:287)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.initialize(SecondaryNameNode.java:232)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.<init>(SecondaryNameNode.java:192)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.main(SecondaryNameNode.java:671)
+Caused by: java.net.UnknownHostException: master
+	... 6 more
+ (-x) unlimited

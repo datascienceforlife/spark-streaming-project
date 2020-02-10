@@ -1,0 +1,86 @@
+Spark Executor Command: "/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java" "-cp" "/root/spark/conf/:/root/spark/jars/*" "-Xmx1024M" "-Dspark.driver.port=46601" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@master:46601" "--executor-id" "1" "--hostname" "172.23.0.4" "--cores" "1" "--app-id" "app-20191119110907-0000" "--worker-url" "spark://Worker@172.23.0.4:38699"
+========================================
+
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+19/11/19 19:09:08 INFO CoarseGrainedExecutorBackend: Started daemon with process name: 241@slave2
+19/11/19 19:09:08 INFO SignalUtils: Registered signal handler for TERM
+19/11/19 19:09:08 INFO SignalUtils: Registered signal handler for HUP
+19/11/19 19:09:08 INFO SignalUtils: Registered signal handler for INT
+19/11/19 19:09:08 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+19/11/19 19:09:09 INFO SecurityManager: Changing view acls to: root
+19/11/19 19:09:09 INFO SecurityManager: Changing modify acls to: root
+19/11/19 19:09:09 INFO SecurityManager: Changing view acls groups to: 
+19/11/19 19:09:09 INFO SecurityManager: Changing modify acls groups to: 
+19/11/19 19:09:09 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/11/19 19:09:09 INFO TransportClientFactory: Successfully created connection to master/172.23.0.2:46601 after 158 ms (0 ms spent in bootstraps)
+19/11/19 19:09:09 INFO SecurityManager: Changing view acls to: root
+19/11/19 19:09:09 INFO SecurityManager: Changing modify acls to: root
+19/11/19 19:09:09 INFO SecurityManager: Changing view acls groups to: 
+19/11/19 19:09:09 INFO SecurityManager: Changing modify acls groups to: 
+19/11/19 19:09:09 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/11/19 19:09:09 INFO TransportClientFactory: Successfully created connection to master/172.23.0.2:46601 after 19 ms (0 ms spent in bootstraps)
+19/11/19 19:09:10 INFO DiskBlockManager: Created local directory at /tmp/spark-738350d2-24cc-4dd2-a158-bc1ae36facc0/executor-933df34f-d4e5-4f76-af33-5b6e9612b8f2/blockmgr-043daa83-c505-4139-a93c-1c47deb41c47
+19/11/19 19:09:10 INFO MemoryStore: MemoryStore started with capacity 413.9 MB
+19/11/19 19:09:10 INFO CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@master:46601
+19/11/19 19:09:10 INFO WorkerWatcher: Connecting to worker spark://Worker@172.23.0.4:38699
+19/11/19 19:09:10 INFO CoarseGrainedExecutorBackend: Successfully registered with driver
+19/11/19 19:09:10 INFO WorkerWatcher: Successfully connected to spark://Worker@172.23.0.4:38699
+19/11/19 19:09:10 INFO Executor: Starting executor ID 1 on host 172.23.0.4
+19/11/19 19:09:10 INFO TransportClientFactory: Successfully created connection to /172.23.0.4:38699 after 22 ms (0 ms spent in bootstraps)
+19/11/19 19:09:10 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 45599.
+19/11/19 19:09:10 INFO NettyBlockTransferService: Server created on 172.23.0.4:45599
+19/11/19 19:09:10 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+19/11/19 19:09:10 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(1, 172.23.0.4, 45599, None)
+19/11/19 19:09:10 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(1, 172.23.0.4, 45599, None)
+19/11/19 19:09:10 INFO BlockManager: Initialized BlockManager: BlockManagerId(1, 172.23.0.4, 45599, None)
+19/11/19 19:09:10 INFO CoarseGrainedExecutorBackend: Got assigned task 0
+19/11/19 19:09:10 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+19/11/19 19:09:10 INFO TorrentBroadcast: Started reading broadcast variable 1
+19/11/19 19:09:10 INFO TransportClientFactory: Successfully created connection to master/172.23.0.2:41383 after 10 ms (0 ms spent in bootstraps)
+19/11/19 19:09:10 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 7.2 KB, free 413.9 MB)
+19/11/19 19:09:11 INFO TorrentBroadcast: Reading broadcast variable 1 took 162 ms
+19/11/19 19:09:11 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 11.1 KB, free 413.9 MB)
+19/11/19 19:09:11 INFO HadoopRDD: Input split: hdfs://master:54310/input/data.txt:0+16777216
+19/11/19 19:09:11 INFO TorrentBroadcast: Started reading broadcast variable 0
+19/11/19 19:09:11 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 22.9 KB, free 413.9 MB)
+19/11/19 19:09:11 INFO TorrentBroadcast: Reading broadcast variable 0 took 16 ms
+19/11/19 19:09:11 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 320.9 KB, free 413.6 MB)
+19/11/19 19:09:22 INFO PythonRunner: Times: total = 9275, boot = 886, init = 139, finish = 8250
+19/11/19 19:09:22 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1785 bytes result sent to driver
+19/11/19 19:09:22 INFO CoarseGrainedExecutorBackend: Got assigned task 3
+19/11/19 19:09:22 INFO Executor: Running task 3.0 in stage 0.0 (TID 3)
+19/11/19 19:09:22 INFO HadoopRDD: Input split: hdfs://master:54310/input/data.txt:50331648+16777216
+19/11/19 19:09:30 INFO PythonRunner: Times: total = 7994, boot = -697, init = 731, finish = 7960
+19/11/19 19:09:30 INFO Executor: Finished task 3.0 in stage 0.0 (TID 3). 1785 bytes result sent to driver
+19/11/19 19:09:30 INFO CoarseGrainedExecutorBackend: Got assigned task 5
+19/11/19 19:09:30 INFO Executor: Running task 5.0 in stage 0.0 (TID 5)
+19/11/19 19:09:30 INFO HadoopRDD: Input split: hdfs://master:54310/input/data.txt:83886080+16777216
+19/11/19 19:09:38 INFO PythonRunner: Times: total = 7727, boot = -148, init = 177, finish = 7698
+19/11/19 19:09:38 INFO Executor: Finished task 5.0 in stage 0.0 (TID 5). 1742 bytes result sent to driver
+19/11/19 19:09:38 INFO CoarseGrainedExecutorBackend: Got assigned task 7
+19/11/19 19:09:38 INFO Executor: Running task 7.0 in stage 0.0 (TID 7)
+19/11/19 19:09:38 INFO HadoopRDD: Input split: hdfs://master:54310/input/data.txt:117440512+16777216
+19/11/19 19:09:46 INFO PythonRunner: Times: total = 7843, boot = -125, init = 152, finish = 7816
+19/11/19 19:09:46 INFO Executor: Finished task 7.0 in stage 0.0 (TID 7). 1742 bytes result sent to driver
+19/11/19 19:09:46 INFO CoarseGrainedExecutorBackend: Got assigned task 8
+19/11/19 19:09:46 INFO Executor: Running task 8.0 in stage 0.0 (TID 8)
+19/11/19 19:09:46 INFO HadoopRDD: Input split: hdfs://master:54310/input/data.txt:134217728+16777216
+19/11/19 19:09:54 INFO PythonRunner: Times: total = 8080, boot = -111, init = 137, finish = 8054
+19/11/19 19:09:54 INFO Executor: Finished task 8.0 in stage 0.0 (TID 8). 1742 bytes result sent to driver
+19/11/19 19:09:54 INFO CoarseGrainedExecutorBackend: Got assigned task 10
+19/11/19 19:09:54 INFO Executor: Running task 10.0 in stage 0.0 (TID 10)
+19/11/19 19:09:54 INFO HadoopRDD: Input split: hdfs://master:54310/input/data.txt:167772160+16777216
+19/11/19 19:10:02 INFO PythonRunner: Times: total = 7758, boot = -102, init = 124, finish = 7736
+19/11/19 19:10:02 INFO Executor: Finished task 10.0 in stage 0.0 (TID 10). 1742 bytes result sent to driver
+19/11/19 19:10:02 INFO CoarseGrainedExecutorBackend: Got assigned task 12
+19/11/19 19:10:02 INFO Executor: Running task 12.0 in stage 0.0 (TID 12)
+19/11/19 19:10:02 INFO HadoopRDD: Input split: hdfs://master:54310/input/data.txt:201326592+16777216
+19/11/19 19:10:10 INFO PythonRunner: Times: total = 7822, boot = -75, init = 87, finish = 7810
+19/11/19 19:10:10 INFO Executor: Finished task 12.0 in stage 0.0 (TID 12). 1742 bytes result sent to driver
+19/11/19 19:10:10 INFO CoarseGrainedExecutorBackend: Got assigned task 14
+19/11/19 19:10:10 INFO Executor: Running task 14.0 in stage 0.0 (TID 14)
+19/11/19 19:10:10 INFO HadoopRDD: Input split: hdfs://master:54310/input/data.txt:234881024+16777216
+19/11/19 19:10:13 INFO Executor: Executor is trying to kill task 14.0 in stage 0.0 (TID 14), reason: Stage cancelled
+19/11/19 19:10:13 INFO CoarseGrainedExecutorBackend: Driver commanded a shutdown
+19/11/19 19:10:13 ERROR CoarseGrainedExecutorBackend: RECEIVED SIGNAL TERM
+tdown

@@ -1,0 +1,295 @@
+Spark Executor Command: "/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java" "-cp" "/root/spark/conf/:/root/spark/jars/*" "-Xmx1024M" "-Dspark.driver.port=44497" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@master:44497" "--executor-id" "1" "--hostname" "172.23.0.4" "--cores" "1" "--app-id" "app-20191128140645-0000" "--worker-url" "spark://Worker@172.23.0.4:35869"
+========================================
+
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+19/11/28 22:06:46 INFO CoarseGrainedExecutorBackend: Started daemon with process name: 245@slave2
+19/11/28 22:06:46 INFO SignalUtils: Registered signal handler for TERM
+19/11/28 22:06:46 INFO SignalUtils: Registered signal handler for HUP
+19/11/28 22:06:46 INFO SignalUtils: Registered signal handler for INT
+19/11/28 22:06:47 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+19/11/28 22:06:47 INFO SecurityManager: Changing view acls to: root
+19/11/28 22:06:47 INFO SecurityManager: Changing modify acls to: root
+19/11/28 22:06:47 INFO SecurityManager: Changing view acls groups to: 
+19/11/28 22:06:47 INFO SecurityManager: Changing modify acls groups to: 
+19/11/28 22:06:47 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/11/28 22:06:47 INFO TransportClientFactory: Successfully created connection to master/172.23.0.2:44497 after 84 ms (0 ms spent in bootstraps)
+19/11/28 22:06:48 INFO SecurityManager: Changing view acls to: root
+19/11/28 22:06:48 INFO SecurityManager: Changing modify acls to: root
+19/11/28 22:06:48 INFO SecurityManager: Changing view acls groups to: 
+19/11/28 22:06:48 INFO SecurityManager: Changing modify acls groups to: 
+19/11/28 22:06:48 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/11/28 22:06:48 INFO TransportClientFactory: Successfully created connection to master/172.23.0.2:44497 after 14 ms (0 ms spent in bootstraps)
+19/11/28 22:06:48 INFO DiskBlockManager: Created local directory at /tmp/spark-6a215ed0-e2db-4102-bb6f-f71a6f50cf52/executor-4deebffe-df05-4d1f-b9ef-0e07b3450b01/blockmgr-f4ea11a3-7bab-4ee1-83c7-bd5215d4a00e
+19/11/28 22:06:48 INFO MemoryStore: MemoryStore started with capacity 413.9 MB
+19/11/28 22:06:48 INFO CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@master:44497
+19/11/28 22:06:48 INFO WorkerWatcher: Connecting to worker spark://Worker@172.23.0.4:35869
+19/11/28 22:06:48 INFO CoarseGrainedExecutorBackend: Successfully registered with driver
+19/11/28 22:06:48 INFO Executor: Starting executor ID 1 on host 172.23.0.4
+19/11/28 22:06:48 INFO WorkerWatcher: Successfully connected to spark://Worker@172.23.0.4:35869
+19/11/28 22:06:48 INFO TransportClientFactory: Successfully created connection to /172.23.0.4:35869 after 8 ms (0 ms spent in bootstraps)
+19/11/28 22:06:48 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 41595.
+19/11/28 22:06:48 INFO NettyBlockTransferService: Server created on 172.23.0.4:41595
+19/11/28 22:06:48 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+19/11/28 22:06:48 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(1, 172.23.0.4, 41595, None)
+19/11/28 22:06:48 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(1, 172.23.0.4, 41595, None)
+19/11/28 22:06:48 INFO BlockManager: Initialized BlockManager: BlockManagerId(1, 172.23.0.4, 41595, None)
+19/11/28 22:06:49 INFO CoarseGrainedExecutorBackend: Got assigned task 1
+19/11/28 22:06:49 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+19/11/28 22:06:49 INFO TorrentBroadcast: Started reading broadcast variable 1
+19/11/28 22:06:49 INFO TransportClientFactory: Successfully created connection to master/172.23.0.2:33495 after 26 ms (0 ms spent in bootstraps)
+19/11/28 22:06:49 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 7.2 KB, free 413.9 MB)
+19/11/28 22:06:49 INFO TorrentBroadcast: Reading broadcast variable 1 took 127 ms
+19/11/28 22:06:49 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 11.1 KB, free 413.9 MB)
+19/11/28 22:06:49 INFO HadoopRDD: Input split: hdfs://master:54310/input/data.txt:16777216+16777216
+19/11/28 22:06:49 INFO TorrentBroadcast: Started reading broadcast variable 0
+19/11/28 22:06:49 INFO TransportClientFactory: Successfully created connection to /172.23.0.3:38319 after 1 ms (0 ms spent in bootstraps)
+19/11/28 22:06:49 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 22.9 KB, free 413.9 MB)
+19/11/28 22:06:49 INFO TorrentBroadcast: Reading broadcast variable 0 took 96 ms
+19/11/28 22:06:49 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 320.9 KB, free 413.6 MB)
+19/11/28 22:07:00 INFO PythonRunner: Times: total = 9031, boot = 841, init = 80, finish = 8110
+19/11/28 22:07:00 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 1785 bytes result sent to driver
+19/11/28 22:07:00 INFO CoarseGrainedExecutorBackend: Got assigned task 3
+19/11/28 22:07:00 INFO Executor: Running task 3.0 in stage 0.0 (TID 3)
+19/11/28 22:07:00 INFO HadoopRDD: Input split: hdfs://master:54310/input/data.txt:50331648+16777216
+19/11/28 22:07:08 INFO PythonRunner: Times: total = 8155, boot = -754, init = 792, finish = 8117
+19/11/28 22:07:08 INFO Executor: Finished task 3.0 in stage 0.0 (TID 3). 1742 bytes result sent to driver
+19/11/28 22:07:08 INFO CoarseGrainedExecutorBackend: Got assigned task 5
+19/11/28 22:07:08 INFO Executor: Running task 5.0 in stage 0.0 (TID 5)
+19/11/28 22:07:08 INFO HadoopRDD: Input split: hdfs://master:54310/input/data.txt:83886080+16777216
+19/11/28 22:07:17 INFO PythonRunner: Times: total = 8013, boot = -142, init = 153, finish = 8002
+19/11/28 22:07:17 INFO Executor: Finished task 5.0 in stage 0.0 (TID 5). 1742 bytes result sent to driver
+19/11/28 22:07:17 INFO CoarseGrainedExecutorBackend: Got assigned task 7
+19/11/28 22:07:17 INFO Executor: Running task 7.0 in stage 0.0 (TID 7)
+19/11/28 22:07:17 INFO HadoopRDD: Input split: hdfs://master:54310/input/data.txt:117440512+16777216
+19/11/28 22:07:24 INFO PythonRunner: Times: total = 7797, boot = -123, init = 134, finish = 7786
+19/11/28 22:07:24 INFO Executor: Finished task 7.0 in stage 0.0 (TID 7). 1742 bytes result sent to driver
+19/11/28 22:07:25 INFO CoarseGrainedExecutorBackend: Got assigned task 9
+19/11/28 22:07:25 INFO Executor: Running task 9.0 in stage 0.0 (TID 9)
+19/11/28 22:07:25 INFO HadoopRDD: Input split: hdfs://master:54310/input/data.txt:150994944+16777216
+19/11/28 22:07:32 INFO PythonRunner: Times: total = 7902, boot = -99, init = 128, finish = 7873
+19/11/28 22:07:33 INFO Executor: Finished task 9.0 in stage 0.0 (TID 9). 1742 bytes result sent to driver
+19/11/28 22:07:33 INFO CoarseGrainedExecutorBackend: Got assigned task 11
+19/11/28 22:07:33 INFO Executor: Running task 11.0 in stage 0.0 (TID 11)
+19/11/28 22:07:33 INFO HadoopRDD: Input split: hdfs://master:54310/input/data.txt:184549376+16777216
+19/11/28 22:07:41 INFO PythonRunner: Times: total = 8126, boot = -79, init = 90, finish = 8115
+19/11/28 22:07:41 INFO Executor: Finished task 11.0 in stage 0.0 (TID 11). 1742 bytes result sent to driver
+19/11/28 22:07:41 INFO CoarseGrainedExecutorBackend: Got assigned task 13
+19/11/28 22:07:41 INFO Executor: Running task 13.0 in stage 0.0 (TID 13)
+19/11/28 22:07:41 INFO HadoopRDD: Input split: hdfs://master:54310/input/data.txt:218103808+16777216
+19/11/28 22:07:49 INFO PythonRunner: Times: total = 7781, boot = -76, init = 98, finish = 7759
+19/11/28 22:07:49 INFO Executor: Finished task 13.0 in stage 0.0 (TID 13). 1742 bytes result sent to driver
+19/11/28 22:07:49 INFO CoarseGrainedExecutorBackend: Got assigned task 15
+19/11/28 22:07:49 INFO Executor: Running task 15.0 in stage 0.0 (TID 15)
+19/11/28 22:07:49 INFO HadoopRDD: Input split: hdfs://master:54310/input/data.txt:251658240+16777216
+19/11/28 22:07:57 INFO PythonRunner: Times: total = 7750, boot = -65, init = 75, finish = 7740
+19/11/28 22:07:57 INFO Executor: Finished task 15.0 in stage 0.0 (TID 15). 1742 bytes result sent to driver
+19/11/28 22:07:57 INFO CoarseGrainedExecutorBackend: Got assigned task 17
+19/11/28 22:07:57 INFO Executor: Running task 17.0 in stage 0.0 (TID 17)
+19/11/28 22:07:57 INFO HadoopRDD: Input split: hdfs://master:54310/input/data.txt:285212672+16777216
+19/11/28 22:08:04 INFO PythonRunner: Times: total = 7718, boot = -84, init = 111, finish = 7691
+19/11/28 22:08:04 INFO Executor: Finished task 17.0 in stage 0.0 (TID 17). 1742 bytes result sent to driver
+19/11/28 22:08:04 INFO CoarseGrainedExecutorBackend: Got assigned task 19
+19/11/28 22:08:04 INFO Executor: Running task 19.0 in stage 0.0 (TID 19)
+19/11/28 22:08:04 INFO HadoopRDD: Input split: hdfs://master:54310/input/data.txt:318767104+16777216
+19/11/28 22:08:12 INFO PythonRunner: Times: total = 7836, boot = -90, init = 100, finish = 7826
+19/11/28 22:08:12 INFO Executor: Finished task 19.0 in stage 0.0 (TID 19). 1742 bytes result sent to driver
+19/11/28 22:08:12 INFO CoarseGrainedExecutorBackend: Got assigned task 21
+19/11/28 22:08:12 INFO Executor: Running task 21.0 in stage 0.0 (TID 21)
+19/11/28 22:08:12 INFO HadoopRDD: Input split: hdfs://master:54310/input/data.txt:352321536+16777216
+19/11/28 22:08:20 INFO PythonRunner: Times: total = 7783, boot = -85, init = 94, finish = 7774
+19/11/28 22:08:20 INFO Executor: Finished task 21.0 in stage 0.0 (TID 21). 1742 bytes result sent to driver
+19/11/28 22:08:20 INFO CoarseGrainedExecutorBackend: Got assigned task 23
+19/11/28 22:08:20 INFO Executor: Running task 23.0 in stage 0.0 (TID 23)
+19/11/28 22:08:20 INFO HadoopRDD: Input split: hdfs://master:54310/input/data.txt:385875968+16777216
+19/11/28 22:08:28 INFO PythonRunner: Times: total = 7745, boot = -71, init = 82, finish = 7734
+19/11/28 22:08:28 INFO Executor: Finished task 23.0 in stage 0.0 (TID 23). 1699 bytes result sent to driver
+19/11/28 22:08:28 INFO CoarseGrainedExecutorBackend: Got assigned task 25
+19/11/28 22:08:28 INFO Executor: Running task 25.0 in stage 0.0 (TID 25)
+19/11/28 22:08:28 INFO HadoopRDD: Input split: hdfs://master:54310/input/data.txt:419430400+16777216
+19/11/28 22:08:36 INFO PythonRunner: Times: total = 7825, boot = -68, init = 81, finish = 7812
+19/11/28 22:08:36 INFO Executor: Finished task 25.0 in stage 0.0 (TID 25). 1742 bytes result sent to driver
+19/11/28 22:08:36 INFO CoarseGrainedExecutorBackend: Got assigned task 27
+19/11/28 22:08:36 INFO Executor: Running task 27.0 in stage 0.0 (TID 27)
+19/11/28 22:08:36 INFO HadoopRDD: Input split: hdfs://master:54310/input/data.txt:452984832+16777216
+19/11/28 22:08:44 INFO PythonRunner: Times: total = 7732, boot = -62, init = 72, finish = 7722
+19/11/28 22:08:44 INFO Executor: Finished task 27.0 in stage 0.0 (TID 27). 1699 bytes result sent to driver
+19/11/28 22:08:44 INFO CoarseGrainedExecutorBackend: Got assigned task 29
+19/11/28 22:08:44 INFO Executor: Running task 29.0 in stage 0.0 (TID 29)
+19/11/28 22:08:44 INFO HadoopRDD: Input split: hdfs://master:54310/input/data.txt:486539264+16777216
+19/11/28 22:08:52 INFO PythonRunner: Times: total = 8012, boot = -33, init = 44, finish = 8001
+19/11/28 22:08:52 INFO Executor: Finished task 29.0 in stage 0.0 (TID 29). 1742 bytes result sent to driver
+19/11/28 22:08:52 INFO CoarseGrainedExecutorBackend: Got assigned task 31
+19/11/28 22:08:52 INFO Executor: Running task 31.0 in stage 0.0 (TID 31)
+19/11/28 22:08:52 INFO HadoopRDD: Input split: hdfs://master:54310/input/data.txt:520093696+16777216
+19/11/28 22:09:00 INFO PythonRunner: Times: total = 7731, boot = -70, init = 79, finish = 7722
+19/11/28 22:09:00 INFO Executor: Finished task 31.0 in stage 0.0 (TID 31). 1742 bytes result sent to driver
+19/11/28 22:09:00 INFO CoarseGrainedExecutorBackend: Got assigned task 32
+19/11/28 22:09:00 INFO Executor: Running task 0.0 in stage 1.0 (TID 32)
+19/11/28 22:09:00 INFO MapOutputTrackerWorker: Updating epoch to 1 and clearing cache
+19/11/28 22:09:00 INFO TorrentBroadcast: Started reading broadcast variable 2
+19/11/28 22:09:00 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 29.6 KB, free 413.5 MB)
+19/11/28 22:09:00 INFO TorrentBroadcast: Reading broadcast variable 2 took 11 ms
+19/11/28 22:09:00 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 77.3 KB, free 413.5 MB)
+19/11/28 22:09:00 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+19/11/28 22:09:00 INFO MapOutputTrackerWorker: Doing the fetch; tracker endpoint = NettyRpcEndpointRef(spark://MapOutputTracker@master:44497)
+19/11/28 22:09:00 INFO MapOutputTrackerWorker: Got the output locations
+19/11/28 22:09:00 INFO ShuffleBlockFetcherIterator: Getting 32 non-empty blocks including 16 local blocks and 16 remote blocks
+19/11/28 22:09:00 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 52 ms
+19/11/28 22:09:00 INFO HadoopMapRedCommitProtocol: Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+19/11/28 22:09:00 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+19/11/28 22:09:00 INFO PythonRunner: Times: total = 95, boot = -273, init = 368, finish = 0
+19/11/28 22:09:00 INFO FileOutputCommitter: Saved output of task 'attempt_20191128140648_0008_m_000000_0' to hdfs://master:54310/output/_temporary/0/task_20191128140648_0008_m_000000
+19/11/28 22:09:00 INFO SparkHadoopMapRedUtil: attempt_20191128140648_0008_m_000000_0: Committed
+19/11/28 22:09:00 INFO Executor: Finished task 0.0 in stage 1.0 (TID 32). 2110 bytes result sent to driver
+19/11/28 22:09:00 INFO CoarseGrainedExecutorBackend: Got assigned task 34
+19/11/28 22:09:00 INFO Executor: Running task 2.0 in stage 1.0 (TID 34)
+19/11/28 22:09:00 INFO ShuffleBlockFetcherIterator: Getting 32 non-empty blocks including 16 local blocks and 16 remote blocks
+19/11/28 22:09:00 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 1 ms
+19/11/28 22:09:00 INFO HadoopMapRedCommitProtocol: Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+19/11/28 22:09:00 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+19/11/28 22:09:00 INFO PythonRunner: Times: total = 78, boot = -282, init = 359, finish = 1
+19/11/28 22:09:01 INFO FileOutputCommitter: Saved output of task 'attempt_20191128140648_0008_m_000002_0' to hdfs://master:54310/output/_temporary/0/task_20191128140648_0008_m_000002
+19/11/28 22:09:01 INFO SparkHadoopMapRedUtil: attempt_20191128140648_0008_m_000002_0: Committed
+19/11/28 22:09:01 INFO Executor: Finished task 2.0 in stage 1.0 (TID 34). 2024 bytes result sent to driver
+19/11/28 22:09:01 INFO CoarseGrainedExecutorBackend: Got assigned task 37
+19/11/28 22:09:01 INFO Executor: Running task 5.0 in stage 1.0 (TID 37)
+19/11/28 22:09:01 INFO ShuffleBlockFetcherIterator: Getting 32 non-empty blocks including 16 local blocks and 16 remote blocks
+19/11/28 22:09:01 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 9 ms
+19/11/28 22:09:01 INFO HadoopMapRedCommitProtocol: Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+19/11/28 22:09:01 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+19/11/28 22:09:01 INFO PythonRunner: Times: total = 73, boot = -141, init = 213, finish = 1
+19/11/28 22:09:01 INFO FileOutputCommitter: Saved output of task 'attempt_20191128140648_0008_m_000005_0' to hdfs://master:54310/output/_temporary/0/task_20191128140648_0008_m_000005
+19/11/28 22:09:01 INFO SparkHadoopMapRedUtil: attempt_20191128140648_0008_m_000005_0: Committed
+19/11/28 22:09:01 INFO Executor: Finished task 5.0 in stage 1.0 (TID 37). 2024 bytes result sent to driver
+19/11/28 22:09:01 INFO CoarseGrainedExecutorBackend: Got assigned task 39
+19/11/28 22:09:01 INFO Executor: Running task 7.0 in stage 1.0 (TID 39)
+19/11/28 22:09:01 INFO ShuffleBlockFetcherIterator: Getting 32 non-empty blocks including 16 local blocks and 16 remote blocks
+19/11/28 22:09:01 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 5 ms
+19/11/28 22:09:01 INFO HadoopMapRedCommitProtocol: Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+19/11/28 22:09:01 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+19/11/28 22:09:01 INFO PythonRunner: Times: total = 71, boot = -119, init = 189, finish = 1
+19/11/28 22:09:01 INFO FileOutputCommitter: Saved output of task 'attempt_20191128140648_0008_m_000007_0' to hdfs://master:54310/output/_temporary/0/task_20191128140648_0008_m_000007
+19/11/28 22:09:01 INFO SparkHadoopMapRedUtil: attempt_20191128140648_0008_m_000007_0: Committed
+19/11/28 22:09:01 INFO Executor: Finished task 7.0 in stage 1.0 (TID 39). 2024 bytes result sent to driver
+19/11/28 22:09:01 INFO CoarseGrainedExecutorBackend: Got assigned task 41
+19/11/28 22:09:01 INFO Executor: Running task 9.0 in stage 1.0 (TID 41)
+19/11/28 22:09:01 INFO ShuffleBlockFetcherIterator: Getting 32 non-empty blocks including 16 local blocks and 16 remote blocks
+19/11/28 22:09:01 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 13 ms
+19/11/28 22:09:01 INFO HadoopMapRedCommitProtocol: Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+19/11/28 22:09:01 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+19/11/28 22:09:01 INFO PythonRunner: Times: total = 62, boot = -132, init = 193, finish = 1
+19/11/28 22:09:01 INFO FileOutputCommitter: Saved output of task 'attempt_20191128140648_0008_m_000009_0' to hdfs://master:54310/output/_temporary/0/task_20191128140648_0008_m_000009
+19/11/28 22:09:01 INFO SparkHadoopMapRedUtil: attempt_20191128140648_0008_m_000009_0: Committed
+19/11/28 22:09:01 INFO Executor: Finished task 9.0 in stage 1.0 (TID 41). 2024 bytes result sent to driver
+19/11/28 22:09:01 INFO CoarseGrainedExecutorBackend: Got assigned task 43
+19/11/28 22:09:01 INFO Executor: Running task 11.0 in stage 1.0 (TID 43)
+19/11/28 22:09:01 INFO ShuffleBlockFetcherIterator: Getting 32 non-empty blocks including 16 local blocks and 16 remote blocks
+19/11/28 22:09:01 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 13 ms
+19/11/28 22:09:01 INFO HadoopMapRedCommitProtocol: Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+19/11/28 22:09:01 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+19/11/28 22:09:01 INFO PythonRunner: Times: total = 68, boot = -125, init = 192, finish = 1
+19/11/28 22:09:01 INFO FileOutputCommitter: Saved output of task 'attempt_20191128140648_0008_m_000011_0' to hdfs://master:54310/output/_temporary/0/task_20191128140648_0008_m_000011
+19/11/28 22:09:01 INFO SparkHadoopMapRedUtil: attempt_20191128140648_0008_m_000011_0: Committed
+19/11/28 22:09:01 INFO Executor: Finished task 11.0 in stage 1.0 (TID 43). 2024 bytes result sent to driver
+19/11/28 22:09:01 INFO CoarseGrainedExecutorBackend: Got assigned task 45
+19/11/28 22:09:01 INFO Executor: Running task 13.0 in stage 1.0 (TID 45)
+19/11/28 22:09:01 INFO ShuffleBlockFetcherIterator: Getting 32 non-empty blocks including 16 local blocks and 16 remote blocks
+19/11/28 22:09:01 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 1 ms
+19/11/28 22:09:01 INFO HadoopMapRedCommitProtocol: Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+19/11/28 22:09:01 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+19/11/28 22:09:01 INFO PythonRunner: Times: total = 69, boot = -86, init = 154, finish = 1
+19/11/28 22:09:02 INFO FileOutputCommitter: Saved output of task 'attempt_20191128140648_0008_m_000013_0' to hdfs://master:54310/output/_temporary/0/task_20191128140648_0008_m_000013
+19/11/28 22:09:02 INFO SparkHadoopMapRedUtil: attempt_20191128140648_0008_m_000013_0: Committed
+19/11/28 22:09:02 INFO Executor: Finished task 13.0 in stage 1.0 (TID 45). 2024 bytes result sent to driver
+19/11/28 22:09:02 INFO CoarseGrainedExecutorBackend: Got assigned task 47
+19/11/28 22:09:02 INFO Executor: Running task 15.0 in stage 1.0 (TID 47)
+19/11/28 22:09:02 INFO ShuffleBlockFetcherIterator: Getting 32 non-empty blocks including 16 local blocks and 16 remote blocks
+19/11/28 22:09:02 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 15 ms
+19/11/28 22:09:02 INFO HadoopMapRedCommitProtocol: Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+19/11/28 22:09:02 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+19/11/28 22:09:02 INFO PythonRunner: Times: total = 73, boot = -94, init = 166, finish = 1
+19/11/28 22:09:02 INFO FileOutputCommitter: Saved output of task 'attempt_20191128140648_0008_m_000015_0' to hdfs://master:54310/output/_temporary/0/task_20191128140648_0008_m_000015
+19/11/28 22:09:02 INFO SparkHadoopMapRedUtil: attempt_20191128140648_0008_m_000015_0: Committed
+19/11/28 22:09:02 INFO Executor: Finished task 15.0 in stage 1.0 (TID 47). 2024 bytes result sent to driver
+19/11/28 22:09:02 INFO CoarseGrainedExecutorBackend: Got assigned task 49
+19/11/28 22:09:02 INFO Executor: Running task 17.0 in stage 1.0 (TID 49)
+19/11/28 22:09:02 INFO ShuffleBlockFetcherIterator: Getting 32 non-empty blocks including 16 local blocks and 16 remote blocks
+19/11/28 22:09:02 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 2 ms
+19/11/28 22:09:02 INFO HadoopMapRedCommitProtocol: Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+19/11/28 22:09:02 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+19/11/28 22:09:02 INFO PythonRunner: Times: total = 74, boot = -103, init = 176, finish = 1
+19/11/28 22:09:02 INFO FileOutputCommitter: Saved output of task 'attempt_20191128140648_0008_m_000017_0' to hdfs://master:54310/output/_temporary/0/task_20191128140648_0008_m_000017
+19/11/28 22:09:02 INFO SparkHadoopMapRedUtil: attempt_20191128140648_0008_m_000017_0: Committed
+19/11/28 22:09:02 INFO Executor: Finished task 17.0 in stage 1.0 (TID 49). 2024 bytes result sent to driver
+19/11/28 22:09:02 INFO CoarseGrainedExecutorBackend: Got assigned task 51
+19/11/28 22:09:02 INFO Executor: Running task 19.0 in stage 1.0 (TID 51)
+19/11/28 22:09:02 INFO ShuffleBlockFetcherIterator: Getting 32 non-empty blocks including 16 local blocks and 16 remote blocks
+19/11/28 22:09:02 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 1 ms
+19/11/28 22:09:02 INFO HadoopMapRedCommitProtocol: Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+19/11/28 22:09:02 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+19/11/28 22:09:02 INFO PythonRunner: Times: total = 72, boot = -109, init = 180, finish = 1
+19/11/28 22:09:02 INFO FileOutputCommitter: Saved output of task 'attempt_20191128140648_0008_m_000019_0' to hdfs://master:54310/output/_temporary/0/task_20191128140648_0008_m_000019
+19/11/28 22:09:02 INFO SparkHadoopMapRedUtil: attempt_20191128140648_0008_m_000019_0: Committed
+19/11/28 22:09:02 INFO Executor: Finished task 19.0 in stage 1.0 (TID 51). 2067 bytes result sent to driver
+19/11/28 22:09:02 INFO CoarseGrainedExecutorBackend: Got assigned task 53
+19/11/28 22:09:02 INFO Executor: Running task 21.0 in stage 1.0 (TID 53)
+19/11/28 22:09:02 INFO ShuffleBlockFetcherIterator: Getting 32 non-empty blocks including 16 local blocks and 16 remote blocks
+19/11/28 22:09:02 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 1 ms
+19/11/28 22:09:02 INFO HadoopMapRedCommitProtocol: Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+19/11/28 22:09:02 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+19/11/28 22:09:02 INFO PythonRunner: Times: total = 64, boot = -145, init = 208, finish = 1
+19/11/28 22:09:02 INFO FileOutputCommitter: Saved output of task 'attempt_20191128140648_0008_m_000021_0' to hdfs://master:54310/output/_temporary/0/task_20191128140648_0008_m_000021
+19/11/28 22:09:02 INFO SparkHadoopMapRedUtil: attempt_20191128140648_0008_m_000021_0: Committed
+19/11/28 22:09:02 INFO Executor: Finished task 21.0 in stage 1.0 (TID 53). 2024 bytes result sent to driver
+19/11/28 22:09:02 INFO CoarseGrainedExecutorBackend: Got assigned task 56
+19/11/28 22:09:02 INFO Executor: Running task 24.0 in stage 1.0 (TID 56)
+19/11/28 22:09:02 INFO ShuffleBlockFetcherIterator: Getting 32 non-empty blocks including 16 local blocks and 16 remote blocks
+19/11/28 22:09:02 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 4 ms
+19/11/28 22:09:02 INFO HadoopMapRedCommitProtocol: Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+19/11/28 22:09:02 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+19/11/28 22:09:02 INFO PythonRunner: Times: total = 59, boot = -130, init = 188, finish = 1
+19/11/28 22:09:02 INFO FileOutputCommitter: Saved output of task 'attempt_20191128140648_0008_m_000024_0' to hdfs://master:54310/output/_temporary/0/task_20191128140648_0008_m_000024
+19/11/28 22:09:02 INFO SparkHadoopMapRedUtil: attempt_20191128140648_0008_m_000024_0: Committed
+19/11/28 22:09:02 INFO Executor: Finished task 24.0 in stage 1.0 (TID 56). 2024 bytes result sent to driver
+19/11/28 22:09:02 INFO CoarseGrainedExecutorBackend: Got assigned task 57
+19/11/28 22:09:02 INFO Executor: Running task 25.0 in stage 1.0 (TID 57)
+19/11/28 22:09:02 INFO ShuffleBlockFetcherIterator: Getting 32 non-empty blocks including 16 local blocks and 16 remote blocks
+19/11/28 22:09:02 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 6 ms
+19/11/28 22:09:03 INFO HadoopMapRedCommitProtocol: Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+19/11/28 22:09:03 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+19/11/28 22:09:03 INFO PythonRunner: Times: total = 77, boot = -89, init = 165, finish = 1
+19/11/28 22:09:03 INFO FileOutputCommitter: Saved output of task 'attempt_20191128140648_0008_m_000025_0' to hdfs://master:54310/output/_temporary/0/task_20191128140648_0008_m_000025
+19/11/28 22:09:03 INFO SparkHadoopMapRedUtil: attempt_20191128140648_0008_m_000025_0: Committed
+19/11/28 22:09:03 INFO Executor: Finished task 25.0 in stage 1.0 (TID 57). 2024 bytes result sent to driver
+19/11/28 22:09:03 INFO CoarseGrainedExecutorBackend: Got assigned task 59
+19/11/28 22:09:03 INFO Executor: Running task 27.0 in stage 1.0 (TID 59)
+19/11/28 22:09:03 INFO ShuffleBlockFetcherIterator: Getting 32 non-empty blocks including 16 local blocks and 16 remote blocks
+19/11/28 22:09:03 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 11 ms
+19/11/28 22:09:03 INFO HadoopMapRedCommitProtocol: Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+19/11/28 22:09:03 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+19/11/28 22:09:03 INFO PythonRunner: Times: total = 63, boot = -114, init = 176, finish = 1
+19/11/28 22:09:03 INFO FileOutputCommitter: Saved output of task 'attempt_20191128140648_0008_m_000027_0' to hdfs://master:54310/output/_temporary/0/task_20191128140648_0008_m_000027
+19/11/28 22:09:03 INFO SparkHadoopMapRedUtil: attempt_20191128140648_0008_m_000027_0: Committed
+19/11/28 22:09:03 INFO Executor: Finished task 27.0 in stage 1.0 (TID 59). 2024 bytes result sent to driver
+19/11/28 22:09:03 INFO CoarseGrainedExecutorBackend: Got assigned task 61
+19/11/28 22:09:03 INFO Executor: Running task 30.0 in stage 1.0 (TID 61)
+19/11/28 22:09:03 INFO ShuffleBlockFetcherIterator: Getting 32 non-empty blocks including 16 local blocks and 16 remote blocks
+19/11/28 22:09:03 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 9 ms
+19/11/28 22:09:03 INFO HadoopMapRedCommitProtocol: Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+19/11/28 22:09:03 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+19/11/28 22:09:03 INFO PythonRunner: Times: total = 74, boot = -111, init = 184, finish = 1
+19/11/28 22:09:03 INFO FileOutputCommitter: Saved output of task 'attempt_20191128140648_0008_m_000030_0' to hdfs://master:54310/output/_temporary/0/task_20191128140648_0008_m_000030
+19/11/28 22:09:03 INFO SparkHadoopMapRedUtil: attempt_20191128140648_0008_m_000030_0: Committed
+19/11/28 22:09:03 INFO Executor: Finished task 30.0 in stage 1.0 (TID 61). 2024 bytes result sent to driver
+19/11/28 22:09:03 INFO CoarseGrainedExecutorBackend: Got assigned task 63
+19/11/28 22:09:03 INFO Executor: Running task 28.0 in stage 1.0 (TID 63)
+19/11/28 22:09:03 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+19/11/28 22:09:03 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 3 ms
+19/11/28 22:09:03 INFO HadoopMapRedCommitProtocol: Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+19/11/28 22:09:03 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+19/11/28 22:09:03 INFO PythonRunner: Times: total = 82, boot = -103, init = 185, finish = 0
+19/11/28 22:09:03 INFO FileOutputCommitter: Saved output of task 'attempt_20191128140648_0008_m_000028_0' to hdfs://master:54310/output/_temporary/0/task_20191128140648_0008_m_000028
+19/11/28 22:09:03 INFO SparkHadoopMapRedUtil: attempt_20191128140648_0008_m_000028_0: Committed
+19/11/28 22:09:03 INFO Executor: Finished task 28.0 in stage 1.0 (TID 63). 1938 bytes result sent to driver
+19/11/28 22:09:04 INFO CoarseGrainedExecutorBackend: Driver commanded a shutdown
+19/11/28 22:09:04 INFO CoarseGrainedExecutorBackend: Driver from master:44497 dis

@@ -1,0 +1,23 @@
+Spark Command: /Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java -cp /Users/macbook/Desktop/VALDOM/BigData/projet-big-data/docker-spark-cluster/spark-2.4.3-bin-hadoop2.7/conf/:/Users/macbook/Desktop/VALDOM/BigData/projet-big-data/docker-spark-cluster/spark-2.4.3-bin-hadoop2.7/jars/* -Xmx1g org.apache.spark.deploy.history.HistoryServer
+========================================
+20/02/06 17:25:44 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Exception in thread "main" java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.apache.spark.deploy.history.HistoryServer$.main(HistoryServer.scala:280)
+	at org.apache.spark.deploy.history.HistoryServer.main(HistoryServer.scala)
+Caused by: java.io.FileNotFoundException: Log directory specified does not exist: file:/tmp/spark-events Did you configure the correct one through spark.history.fs.logDirectory?
+	at org.apache.spark.deploy.history.FsHistoryProvider.org$apache$spark$deploy$history$FsHistoryProvider$$startPolling(FsHistoryProvider.scala:267)
+	at org.apache.spark.deploy.history.FsHistoryProvider.initialize(FsHistoryProvider.scala:211)
+	at org.apache.spark.deploy.history.FsHistoryProvider.<init>(FsHistoryProvider.scala:207)
+	at org.apache.spark.deploy.history.FsHistoryProvider.<init>(FsHistoryProvider.scala:86)
+	... 6 more
+Caused by: java.io.FileNotFoundException: File file:/tmp/spark-events does not exist
+	at org.apache.hadoop.fs.RawLocalFileSystem.deprecatedGetFileStatus(RawLocalFileSystem.java:611)
+	at org.apache.hadoop.fs.RawLocalFileSystem.getFileLinkStatusInternal(RawLocalFileSystem.java:824)
+	at org.apache.hadoop.fs.RawLocalFileSystem.getFileStatus(RawLocalFileSystem.java:601)
+	at org.apache.hadoop.fs.FilterFileSystem.getFileStatus(FilterFileSystem.java:421)
+	at org.apache.spark.deploy.history.FsHistoryProvider.org$apache$spark$deploy$history$FsHistoryProvider$$startPolling(FsHistoryProvider.scala:257)
+	... 9 more

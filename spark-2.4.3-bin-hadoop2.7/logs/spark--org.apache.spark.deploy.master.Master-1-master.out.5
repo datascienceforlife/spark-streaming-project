@@ -1,0 +1,21 @@
+Spark Command: /usr/lib/jvm/java-8-openjdk-amd64//bin/java -cp /root/spark/conf/:/root/spark/jars/* -Xmx1g org.apache.spark.deploy.master.Master --host master --port 7077 --webui-port 8080
+========================================
+20/02/04 17:00:58 ERROR SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[main,5,main]
+java.net.UnknownHostException: master: master: Name or service not known
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1506)
+	at org.apache.spark.util.Utils$.findLocalInetAddress(Utils.scala:946)
+	at org.apache.spark.util.Utils$.org$apache$spark$util$Utils$$localIpAddress$lzycompute(Utils.scala:939)
+	at org.apache.spark.util.Utils$.org$apache$spark$util$Utils$$localIpAddress(Utils.scala:939)
+	at org.apache.spark.util.Utils$$anonfun$localHostName$1.apply(Utils.scala:1003)
+	at org.apache.spark.util.Utils$$anonfun$localHostName$1.apply(Utils.scala:1003)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.apache.spark.util.Utils$.localHostName(Utils.scala:1003)
+	at org.apache.spark.deploy.master.MasterArguments.<init>(MasterArguments.scala:30)
+	at org.apache.spark.deploy.master.Master$.main(Master.scala:1057)
+	at org.apache.spark.deploy.master.Master.main(Master.scala)
+Caused by: java.net.UnknownHostException: master: Name or service not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1501)
+	... 10 more
